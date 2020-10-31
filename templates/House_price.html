@@ -1,0 +1,148 @@
+<html>
+<head>
+
+<title>House Price Prediction</title>
+<style>
+
+form {
+
+text-align:center
+}
+
+input{
+width: 50%
+}
+
+input[type=submit] {
+  background-color: green;
+  color: white;
+  width: 10%
+}
+
+select {
+width: 50%;
+}
+label {
+  font-size: 20px;
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}​
+
+
+</style>
+</head>
+
+<body>
+
+<center><h1>House Price Prediction: {{ results}}</h1></center>
+
+<form action="{{ url_for('predict')}}" method="post">
+
+
+<label for = "area">area of house</label>
+<input type = 'text' id = 'area', name = 'area', required = 'required', placeholder = 'Enter a number...' />
+
+<br></br>
+
+
+<label for = "bathrooms">No of bathrooms</label>
+<input type = 'text' id = 'bathrooms', name = 'bathrooms', required = 'required', placeholder = 'Enter a number...' />
+
+<br></br>
+
+<label for = "stories">No of stories</label>
+<input type = 'text' id = 'stories', name = 'stories', required = 'required', placeholder = 'Enter a number...' />
+
+<br></br>
+
+
+
+<label for = "Mainroad">Mainroad</label>
+<select id="Mainroad" name="Mainroad">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+</select>
+
+
+<br></br>
+
+
+
+<label for = "guestroom">guestroom</label>
+<select id="guestroom" name="guestroom">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+</select>
+
+
+<br></br>
+
+
+<label for = "hotwaterheating">hotwaterheating</label>
+<select id="hotwaterheating" name="hotwaterheating">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+</select>
+
+
+<br></br>
+
+
+<label for = "airconditioning">airconditioning</label>
+<select id="airconditioning" name="airconditioning">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+</select>
+
+
+<br></br>
+
+
+
+<label for = "parking">parking</label>
+<input type = 'text' id = 'parking', name = 'parking', required = 'required', placeholder = 'Enter a number...' />
+
+<br></br>
+
+
+
+<label for = "prefarea">prefarea</label>
+<select id="prefarea" name="prefarea">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+</select>
+
+
+<br></br>
+
+
+<label></label>
+<input id="submit" type="submit" value="Predict" ></input>
+
+</form>
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
